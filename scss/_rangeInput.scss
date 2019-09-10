@@ -1,0 +1,185 @@
+
+// excess height to improve interactive area / accessibility
+$height: 30px;
+$thumb-height: 20px;
+$track-height: 4px;
+
+// colours
+$upper-color: $content-grayBg;
+$lower-color: $gekk-solid;
+$thumb-color: $gekk-solid;
+$thumb-hover-color: lighten($gekk-solid,10%);
+
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100% 50% / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 50% / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: #{$i}px 0 0 -#{($thumb-height - $track-height) / 2} #{$upper-color};
+  @if $i == 1 {
+    @for $k from 2 through 1000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+  @return $val;
+}
+
+.e-range {
+  display: block;
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  height: $height;
+  overflow: hidden;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &.embed{
+    margin-top: -($height/2-$track-height/2);
+    z-index: -10;
+  }
+}
+
+// Webkit
+.e-range::-webkit-slider-runnable-track {
+  z-index: 10;
+  width: 100%;
+  height: $height;
+  background: $lower-background;
+}
+
+.e-range::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  top: 50%;
+  margin-top: (-$thumb-height/2);
+  box-shadow: webkit-slider-thumb-shadow();
+  transition: background-color 150ms;
+}
+
+// Firefox
+.e-range::-moz-range-track,
+.e-range::-moz-range-progress {
+  width: 100%;
+  height: $height;
+  background: $upper-background;
+}
+
+.e-range::-moz-range-progress {
+  background: $lower-background;
+}
+
+.e-range::-moz-range-thumb {
+  appearance: none;
+  margin: 0;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+}
+
+// Internet Exploder
+.e-range::-ms-track {
+  width: 100%;
+  height: $height;
+  border: 0;
+  // color needed to hide track marks
+  color: transparent;
+  background: transparent;
+}
+
+.e-range::-ms-fill-lower {
+  background: $lower-background;
+}
+
+.e-range::-ms-fill-upper {
+  background: $upper-background;
+}
+
+.e-range::-ms-thumb {
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  transition: background-color 150ms;
+  // IE Edge thinks it can support -webkit prefixes
+  top: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.e-range:hover,
+.e-range:focus {
+  &::-webkit-slider-thumb {
+    background-color: $thumb-hover-color;
+  }
+  &::-moz-range-thumb {
+    background-color: $thumb-hover-color;
+  }
+  &::-ms-thumb {
+    background-color: $thumb-hover-color;
+  }
+}
+
+.range-points{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & .range-point{
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: -($height/2+$track-height);
+    flex-grow: 1;
+    flex-basis: 0;
+
+    &:first-child{
+      flex-grow: 0.5;
+      text-align: left;
+      &::before{
+        margin-left: ($thumb-height/2)-1;
+      }
+    }
+    &:nth-child(2){
+      padding-left: $thumb-height/2;
+    }
+    &:last-child{
+      flex-grow: 0.5;
+      text-align: right;
+      &::before{
+        margin-right: ($thumb-height/2)-1;
+      }
+    }
+    &:nth-last-child(2){
+      padding-right: $thumb-height/2;
+    }
+
+    &::before{        
+      content: '';
+      position: relative;
+      pointer-events: none;
+      font-size: 15px;
+      border-right: 1px solid $content-grayBg;
+    }
+
+    &.active{
+      font-weight: normal;
+      &::before{
+        border-right: 2px solid $thumb-color;
+      }
+    }
+  }
+}

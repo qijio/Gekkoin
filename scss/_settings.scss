@@ -1,0 +1,53 @@
+.connected-steps {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+
+  & .step {
+    color: $gekk-solid;
+    background-color: transparent;
+    border: 1px solid $gekk-solid;
+    border-radius: 100%;  
+    display: block;  
+    width: 35px;
+    height: 35px;
+    text-align: center;
+		font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    transition: all .1s ease-in-out;
+
+    &.done{
+      color: white;
+      background: $gekk-grad;
+      border: 0;
+    }
+
+    &:hover{
+      cursor: pointer;
+      filter: brightness(120%);
+      text-decoration: none;
+    }
+  }
+
+  & .connector {
+    flex-grow: 1;
+    width: 10px;
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: $gekk-solid;
+  }
+}
+
+.btn-group-toggle {
+  & .btn{
+    border: 0;
+  }
+  & .btn:not(:disabled):not(.disabled).active, 
+  & .btn:not(:disabled):not(.disabled):active{
+    color: white;
+    background-color: $gekk-solid;
+  }
+}

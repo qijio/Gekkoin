@@ -1,0 +1,108 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/main.min.css">
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+  <title>Создание кошелька Gekkoin</title>
+</head>
+<body class="bg-login frg-main">
+  <div class="main">
+    <div class="container">      
+      <div class="row min-height-100vh justify-content-md-center no-gutters">
+        <div class="col-lg-10">          
+          <img class="my-4" src="img/logo-hor-white.svg" width="135" height="55" alt="Gekkoin">
+        </div>
+
+        <main class="col-md-8 col-lg-5 my-auto py-5">
+          <div class="bg-dark rounded-10">
+            <div class="bg-white rounded-10">
+              <form class="p-3 m-0">
+                <p class="h4 text-center mb-4 mt-1">Создание кошелька <span class="frg-gekk-solid">Gekkoin</span></p>
+                <div class="form-group">
+                  <label for="settings-user-name">Адрес электронной почты</label>
+                  <input type="text" class="form-control" id="settings-user-name">
+                </div>
+                <div class="form-group">
+                  <label for="settings-user-name">Пароль</label>
+                  <input type="text" class="form-control" id="settings-user-name">
+                </div>
+                <div class="form-group">
+                  <label for="settings-user-name">Подтвердите пароль</label>
+                  <input type="text" class="form-control" id="settings-user-name">
+                </div>
+                <div class="g-recaptcha" data-sitekey="test"></div>
+                <button type="submit" class="btn btn-block bg-gekk-solid btn-success mt-3">Зарегистрироваться</button>
+              </form>
+            </div>
+            <p class="h6 frg-light text-center py-2">Уже есть кошелёк? — 
+              <a class="frg-gekk-solid" href="login.html">Войти</a> 
+            </p>
+          </div>
+        </main>
+
+        <footer class="col-lg-10 mt-auto mb-5">
+          <div class="footer container text-regular">
+            <div class="row">
+              <div class="col-sm-6 col-lg-auto mt-3">
+                  <ul class="list-unstyled m-0">
+                    <li><a class="text-light" href="#">Пополнение</a></li>
+                    <li><a class="text-light" href="#">Переводы</a></li>
+                    <li><a class="text-light" href="#">Вывод средств</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-lg-auto mt-3">
+                  <ul class="list-unstyled m-0">
+                    <li><a class="text-light" href="#">Виды вкладов</a></li>
+                    <li><a class="text-light" href="#">Наша криптовалюта</a></li>
+                    <li><a class="text-light" href="#">Как это работает</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-lg-auto mt-3">
+                  <ul class="list-unstyled m-0">
+                    <li><a class="text-light" href="#">Политика конфиденциальности</a></li>
+                    <li><a class="text-light" href="#">Вопросы и ответы</a></li>
+                    <li><a class="text-light" href="#">О компании</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-lg d-flex flex-column align-items-lg-end justify-content-between mt-3">
+                  <div class="d-flex h4">
+                      <a class="text-light" href="#">
+                          <i class="fab fa-vk fa-fw"></i>
+                      </a>
+                      <a class="text-light" href="#">
+                          <i class="fab fa-telegram-plane fa-fw"></i>
+                      </a>
+                      <a class="text-light" href="#">
+                          <i class="fab fa-twitter fa-fw"></i>
+                      </a>
+                      <a class="text-light" href="#">
+                          <i class="fab fa-facebook-f fa-fw"></i>
+                      </a>
+                      <a class="text-light" href="#">
+                          <i class="fab fa-bitcoin fa-fw"></i>
+                      </a>
+                  </div>
+                  <div class="text-light">© Gekkoin. 2018</div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  <script src='./js/main.js'></script>
+</body>
+</html>

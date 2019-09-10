@@ -1,0 +1,167 @@
+<div class="container pb-3">
+    <div class="row">
+      <div class="col-lg order-lg-2">
+        <div class="pt-4 sticky-top">
+          <div class="card bg-light mb-3">
+            <div class="card-header d-flex align-items-center">
+              <div class="h6 text-uppercase d-inline m-0">Стартовый</div>
+              <span class="ml-auto text-right">Ваш текущий статус</span>
+            </div>
+            <div class="card-body py-2">
+              <table class="table main table-sm table-borderless table-layout-fixed m-0">
+                <tbody>
+                  <tr>
+                    <td>Пополнение кошелька</td>
+                    <td class="text-regular">до  250 $ на остаток</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">Перевод средств</td>
+                    <td class="text-regular">250$ на операцию</td>
+                  </tr>
+                  <tr>
+                    <td class="text-regular">400$ в месяц</td>
+                  </tr>
+                  <tr>
+                    <td>Открытие вклада</td>
+                    <td class="text-regular">до 250 $</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card bg-dark text-white mb-3">
+            <div class="card-header d-flex align-items-center">
+              <div class="h6 text-uppercase d-inline m-0">Верифицированный</div>
+              <span class="ml-auto text-right">2/4</span>
+            </div>
+            <div class="card-body py-2">
+                <table class="table main frg-light table-sm table-borderless table-layout-fixed m-0">
+                  <tbody>
+                    <tr>
+                      <td>Пополнение кошелька</td>
+                      <td class="text-regular frg-gekk-solid">Без ограничений</td>
+                    </tr>
+                    <tr>
+                      <td>Перевод средств</td>
+                      <td class="text-regular frg-gekk-solid">Без ограничений</td>
+                    </tr>
+                    <tr>
+                      <td>Открытие вклада</td>
+                      <td class="text-regular frg-gekk-solid">Без ограничений</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+              <div class="connected-steps">
+                <a class="step done" href="#form-email" title="Почта" data-toggle="tooltip" data-placement="bottom">
+                  📧</a>
+                <div class="connector"></div>
+                <a class="step done" href="#form-phone" title="Телефон" data-toggle="tooltip" data-placement="bottom">
+                  📱</a>
+                <div class="connector"></div>
+                <a class="step" href="#form-id" title="Паспорт" data-toggle="tooltip" data-placement="bottom">
+                  📖</a>
+                <div class="connector"></div>
+                <a class="step" href="#form-card" title="Карта банка" data-toggle="tooltip" data-placement="bottom">
+                  💳</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+        <form>
+          <p class="h5 frg-gekk-solid mt-4 mb-3">ПРОФИЛЬ 
+            <span class="frg-dark text-small">(ваш ID: 812-45-07)</span></p>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="settings-user-name">Имя</label>
+              <input type="text" class="form-control form-control-sm" id="settings-user-name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="settings-user-surname">Фамилия </label>
+              <input type="text" class="form-control form-control-sm" id="settings-user-surname">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="settings-user-name">Аватар</label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="language-dropdown">Язык интерфейса</label>
+            <select id="inputState" class="form-control form-control-sm">
+              <option selected>Русский</option>
+              <option>Английский</option>
+              <option>Французский</option>
+              <option>Немецкий</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-sm bg-gekk-solid btn-success">Сохранить</button>
+        </form>
+
+        <form id="form-phone">
+          <p class="h5 frg-gekk-solid mt-5 mb-3">ТЕЛЕФОН</p>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <select class="form-control form-control-sm" id="settings-user-phone">
+                  <option selected>+7 — Россия</option>
+                  <option>+1 — США</option>
+                  <option>+380 — Украина</option>
+                  <option>+39 — Ватикан</option>
+                </select>
+              </div>
+              <input type="text" class="form-control form-control-sm">
+            </div>
+            <button type="submit" class="btn btn-sm btn-outline-secondary">Подтвердить</button>
+          </div>
+        </form>
+        
+        <form id="form-id">
+          <p class="h5 frg-gekk-solid mt-5 mb-3">ПАСПОРТ</p>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="settings-user-name">Серия и номер</label>
+              <input type="text" class="form-control form-control-sm" id="settings-user-name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="settings-user-name">Код подразделения</label>
+              <input type="text" class="form-control form-control-sm" id="settings-user-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="settings-user-name">Дата выдачи</label>
+            <input type="date" class="form-control form-control-sm" id="settings-user-name">
+          </div>
+          <div class="form-group">
+            <label for="settings-user-name">Кем выдан</label>
+            <input type="text" class="form-control form-control-sm" id="settings-user-name">
+          </div>
+          <button type="submit" class="btn btn-sm bg-gekk-solid btn-success">Проверить</button>
+        </form>
+
+        <form>
+          <p class="h5 frg-gekk-solid mt-5 mb-3">СМЕНА ПАРОЛЯ</p>
+          <div class="form-group">
+            <label for="settings-user-name">Текущий пароль</label>
+            <input type="text" class="form-control form-control-sm" id="settings-user-name">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="settings-user-name">Новый пароль</label>
+              <input type="text" class="form-control form-control-sm" id="settings-user-name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="settings-user-name">Ещё раз новый</label>
+              <input type="text" class="form-control form-control-sm" id="settings-user-name">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-sm bg-gekk-solid btn-success">Сменить</button>
+        </form>
+      </div>
+    </div>
+</div>

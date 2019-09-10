@@ -1,0 +1,106 @@
+.p-border {
+  &:hover:not([disabled]), &:active:not([disabled]), &.active{
+    background: $gekk-grad;
+    padding: 1px;
+    & .user-button {
+      padding: 14px 9px;
+      &.small{
+        padding: 9px;
+      }
+    }
+    &.rounded-top-10{
+      & .user-button {
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+      }
+    }
+    &.rounded-bottom-10{
+      & .user-button {
+        border-bottom-left-radius: 9px;
+        border-bottom-right-radius: 9px;
+      }
+    }
+  }
+
+  &.disabled, &:disabled{    
+    cursor: default;
+    pointer-events: none;
+
+    & .user-button {
+      background: lighten($content-grayBg, 6%);
+      & .icon-outline{
+        border-color: $text-gray-dark;
+        color: $text-gray-dark;
+      }
+      & .icon-grad{
+        border-color: $text-gray-dark;
+      }
+    }
+  }
+}
+
+.user-button {
+  font: inherit;
+  cursor: pointer;
+  color: $text-main;
+  border: none;
+  padding: 15px 10px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  line-height: normal;
+
+  background: $content-lightBg;
+  transition: background-color .1s;
+
+  &.small{
+    padding: 10px;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  &:active, &:hover{
+    background: lighten($content-grayBg, 6%);
+    text-decoration: none;
+    color: $text-main;
+  }
+}
+
+.icon-outline{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: 1px solid $gekk-solid;
+
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 35px;
+  color: $gekk-solid;
+
+  &.emoji{    
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.icon-fill{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background: $gekk-grad;
+
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 36px;
+  color: $content-lightBg;
+}
+
+.margin-top-15{
+  margin-top: -15px;
+}

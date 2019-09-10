@@ -1,0 +1,95 @@
+.rounded-5 {
+    border-radius: 5px;
+}
+.rounded-10 {
+    border-radius: 10px;
+}
+.rounded-top-10 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: auto;
+}
+.rounded-bottom-10 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: auto;
+}
+
+.bg-gekk-solid {
+    background: $gekk-solid;
+}
+.bg-gekk-blue {
+    background: $gekk-blue;
+}
+.bg-gekk-dark {
+    background: $gekk-darkBg;
+}
+.bg-gekk-grad {
+    background: $gekk-grad;
+}
+.bg-white {
+    background: $content-lightBg;
+}
+.bg-gray {
+    background: $content-grayBg;    
+}
+
+
+.frg-main {
+    color: $text-main;    
+}
+.frg-light {
+    color: $text-gray-light;    
+}
+.frg-dark {
+    color: $text-gray-dark;    
+}
+.frg-gekk-solid {
+    color: $gekk-solid;
+}
+.frg-gekk-blue {
+    color: $gekk-blue;
+}
+.frg-gekk-dark {
+    color: $gekk-darkBg;
+}
+.frg-gekk-grad {
+    color: $gekk-grad;
+}
+
+.text-regular{
+    font-weight: 400;
+}
+.text-bold{
+    font-weight: 700;
+}
+.text-small{
+    font-size: 12px;
+}
+.text-big{
+    font-size: 18px;
+}
+.text-normal{
+    font-size: 15px;
+}
+
+.hr{
+    margin: 0;
+    border-color: $content-grayBg;
+}
+.hr-vertical{
+    width: 1;
+    height: auto;
+    margin: 0;
+    background: $content-grayBg;
+    border-top: none;
+    display: inline-block;
+}
+
+.min-height-100vh{
+    min-height: 100vh;
+}
+
+.table-layout-fixed{
+    table-layout: fixed;
+}

@@ -1,0 +1,221 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 d-flex flex-column justify-content-center">
+      <p class="h5 frg-gekk-solid text-uppercase mt-4 mb-3">Параметры вклада</p>
+      <!-- <div class="form-row"> -->
+        <div class="form-group">
+          <label for="deposit-sum">Сумма</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">$</span>
+            </div>
+            <input type="text" class="form-control" id="deposit-sum" value="10 000">
+          </div>
+          <div class="px-1">
+            <input class="e-range embed" type="range" min="0" max="100">
+          </div>
+        </div>
+        
+        <!-- понадобится, когда включим евро -->
+        <!-- <div class="form-group col-md-6">
+          <label for="deposit-sum">Валюта</label>      
+          <div class="btn-group-toggle" data-toggle="buttons" id="deposit-currency">
+            <label class="btn btn-light mr-2 mb-2 active">
+              <input type="radio" name="options" id="option2" autocomplete="off" checked> 
+              Доллары
+            </label>
+            <label class="btn btn-light mr-2 mb-2">
+              <input type="radio" name="options" id="option3" autocomplete="off"> 
+              Евро
+            </label>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="form-group mb-4">
+        <label for="">Уровень риска</label>
+        <div class="px-1">
+          <input class="e-range" type="range" min="0" max="2" value="0">
+          <div class="range-points">
+            <div class="range-point active">
+              <div class="text-small frg-dark">Гарантия<br>доходности</div>
+            </div>
+            <div class="range-point">
+              <div class="text-small frg-dark">Гарантия<br>сохранности</div>
+            </div>
+            <div class="range-point">
+              <div class="text-small frg-dark">Фиксированные<br>убытки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="">Процентная ставка</label>
+        <div class="px-1">
+          <input class="e-range" type="range" min="0" max="2">
+          <div class="range-points">
+            <div class="range-point">
+              <div class="text-small frg-dark">10/10</div>
+            </div>
+            <div class="range-point active">
+              <div class="text-small frg-dark">15/5</div>
+            </div>
+            <div class="range-point">
+              <div class="text-small frg-dark">17/3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="">Срок размещения, дней</label>
+        <div class="px-1">
+          <input class="e-range" type="range" min="0" max="3" value="1">
+          <div class="range-points">
+            <div class="range-point">
+              <div class="text-small frg-dark">90</div>
+            </div>
+            <div class="range-point active">
+              <div class="text-small frg-dark">180</div>
+            </div>
+            <div class="range-point">
+              <div class="text-small frg-dark">270</div>
+            </div>
+            <div class="range-point">
+              <div class="text-small frg-dark">360</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="">Криптовалюта для инвестирования</label>
+        <div class="px-1">
+          <div class="btn-group-toggle" data-toggle="buttons" id="deposit-currency">
+            <label class="btn btn-light mr-2 mb-2 active">
+              <input type="radio" name="options" id="option2" autocomplete="off" checked> 
+              Bitcoin(BTC)
+            </label>
+            <label class="btn btn-light mr-2 mb-2">
+              <input type="radio" name="options" id="option3" autocomplete="off"> 
+              Etherium(ETH)
+            </label>
+          </div>
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+            {
+              "showChart": true,
+              "locale": "ru",
+              "largeChartUrl": "",
+              "width": "100%",
+              "height": "275",
+              "plotLineColorGrowing": "rgba(60, 188, 152, 1)",
+              "plotLineColorFalling": "rgba(255, 74, 104, 1)",
+              "gridLineColor": "rgba(233, 233, 234, 1)",
+              "scaleFontColor": "rgba(214, 216, 224, 1)",
+              "belowLineFillColorGrowing": "rgba(60, 188, 152, 0.05)",
+              "belowLineFillColorFalling": "rgba(255, 74, 104, 0.05)",
+              "symbolActiveColor": "rgba(242, 250, 254, 1)",
+              "tabs": [
+                {
+                  "title": "Indices",
+                  "symbols": [
+                    {
+                      "s": "BITFINEX:BTCUSD",
+                      "d": "Bitcoin"
+                    }
+                  ],
+                  "originalTitle": "Indices"
+                }
+              ]
+            }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-lg-6 border-left">
+      <p class="h5 frg-gekk-solid text-uppercase mt-4 mb-3">Выбранный тариф</p>
+
+      <p class="text-big font-weight-light">
+        Вложить <span class="frg-gekk-solid">$10 000</span>
+        <br>в <span class="frg-gekk-solid">Bitcoin</span>
+        <br>на <span class="frg-gekk-solid">180 дней</span>
+      </p>
+      <p class="text-big font-weight-light">
+        C <span class="frg-gekk-solid">гарантированной доходностью</span>
+        <br>по ставке:
+        <br>&emsp;<span class="frg-gekk-solid">15%</span> от роста курса <span class="frg-gekk-solid">Bitcoin</span>
+        или
+        <br>&emsp;<span class="frg-gekk-solid">5%</span> годовых: <span class="frg-gekk-solid">$250</span>
+        <br>&emsp;<span class="text-normal frg-dark">(выбирается наибольшая)</span>
+      </p>
+      <div class="card bg-light my-5">
+        <div class="card-header px-2 py-1">
+          <div class="text-big ">Пример</div>
+        </div>
+        <div class="card-body p-2">
+          <table class="table table-borderless font-weight-light table-sm ">
+            <tbody>
+              <tr>
+                <td>Текущий курс</td>
+                <td align='right' colspan="2">$6 500</td>
+              </tr>
+              <tr>
+                <td>Купили на <span class="frg-gekk-solid">$10 000</span></td>
+                <td align='right' colspan="2">1,54 BTC</td>
+              </tr>
+              <tr>
+                <td>Рост <span class="frg-gekk-solid">Bitcoin</span></td>
+                <td align='right'><span class="frg-gekk-solid">30%</span></td>
+                <td align='right'><span class="text-danger">-30%</span></td>
+              </tr>
+              <tr>
+                <td>Выручили с продажи</td>
+                <td align='right'><span class="frg-gekk-solid">$13 000</span></td>
+                <td align='right'><span class="text-danger">$7 000</span></td>
+              </tr>
+              <tr>
+                <td>Разница</td>
+                <td align='right'><span class="frg-gekk-solid">+$3 000</span></td>
+                <td align='right'><span class="text-danger">-$3 000</span></td>
+              </tr>
+              <tr>
+                <td><span class="frg-gekk-solid">15%</span> от роста</td>
+                <td align='right'><span class="frg-gekk-solid">+$450</span></td>
+                <td align='right'><span class="text-danger">-$450</span></td>
+              </tr>
+              <tr class="border-top">
+                <td>Доход по вкладу</td>
+                <td align='right'><span class="frg-gekk-solid">$450</span></td>
+                <td align='right'><span class="frg-gekk-solid">$250</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <span class="text-small frg-dark">
+            Таблица носит информационный характер, доход по вкладу 
+            рассчитывается по курсу криптовалюты в момент закрытия вклада.
+          </span>
+        </div>
+      </div>
+      
+
+      <form action="">
+        <div class="form-check mt-3 mb-4">
+          <input type="checkbox" class="form-check-input" id="rememberCheck">
+          <label class="form-check-label" for="rememberCheck">Я принимаю 
+            <a href="">условия оферты</a>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-block bg-gekk-grad border-0 btn-success my-4">
+          Открыть вклад
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

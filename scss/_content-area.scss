@@ -1,0 +1,20 @@
+.content-menu {
+  & .nav-link {
+    &.active {
+      padding-bottom: 0;
+      border-bottom: 3px solid $gekk-solid;
+    }
+  }
+}
+
+.form-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: $gekk-solid;
+	outline: 0;
+	box-shadow: 0 0 0 0.0rem;
+}
+
+.custom-file-input ~ .custom-file-label::after {
+  content: "Выберите файл";
+}
